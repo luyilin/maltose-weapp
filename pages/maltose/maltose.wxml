@@ -5,7 +5,7 @@
 
     <form bindsubmit="bindFormSubmit">
         <textarea placeholder="(๑•́ωก̀๑)" name="textarea" bindfocus="maltoseFocus" bindblur="maltoseBlur" focus="{{focus}}" style="border: 1px solid {{textareaFocus}}" value="{{textareaValue}}" />
-        <button class="maltose-logo" form-type="submit"> <text> ๑•́ωก̀๑ </text></button>
+        <button class="maltose-logo" form-type="submit" style="{{logoTap ? 'border-radius: 10rpx 10rpx 0 0': ''}}"> <text> ๑•́ωก̀๑ </text></button>
     </form>
 
     <view class="maltose" hidden="{{showMaltose}}">

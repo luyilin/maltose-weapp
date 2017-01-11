@@ -6,7 +6,8 @@ Page({
       tab: [],
       showMaltose: true,
       showEmoticon: false,
-      showEmoji: true
+      showEmoji: true,
+      logoTap: false
     },
     codeTap: function(e) {
       // wx.navigateTo({
@@ -32,9 +33,11 @@ Page({
     },
     bindFormSubmit: function() {
       let show = !this.data.showMaltose
+      let logoTap = !this.data.logoTap
       this.setData({
         focus: true,
-        showMaltose: show
+        showMaltose: show,
+        logoTap: logoTap
       })
     },
     chooseTab: function(e) {
@@ -73,7 +76,7 @@ Page({
         dataType: 'json',
         method: 'GET',
         success: function(res){
-          console.log('request success', res.data)
+          console.log('request success')
           that.setData({
             emoticon: res.data,
             tab: Object.keys(res.data)
