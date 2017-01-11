@@ -1,0 +1,23 @@
+<view class="maltose-wrap">
+    <text class="header">Maltose</text>
+    <text class="desc">a cute emoticon keyboard which can generate random emoticon</text>
+    <view class="desc">catch the <text bindtap="codeTap" class="code"> code </text></view>
+
+    <form bindsubmit="bindFormSubmit">
+        <textarea placeholder="(๑•́ωก̀๑)" name="textarea" bindfocus="maltoseFocus" bindblur="maltoseBlur" focus="{{focus}}" style="border: 1px solid {{textareaFocus}}" value="{{textareaValue}}" />
+        <button class="maltose-logo" form-type="submit"> <text> ๑•́ωก̀๑ </text></button>
+    </form>
+
+    <view class="maltose" hidden="{{showMaltose}}">
+        <block wx:for="{{emoticon}}" wx:for-item="i">
+            <view wx:for="{{i}}" wx:for-item="k" class="maltose-ul maltose-ul-{{k.type}}" hidden="{{k.type === 'emoticon' ? showEmoticon : showEmoji}}" bindtap="appendHtml">
+                <view wx:for ="{{k.container}}" wx:for-item="j" class="maltose-li" id="{{j.icon}}" style="{{k.type === 'emoji' ? 'font-size: 36rpx' : ''}}">{{j.icon}}</view>
+            </view>
+        </block>
+
+        <view wx:for="{{emoticon}}" wx:for-item="l" class="maltose-title">
+            <text wx:for="{{l}}" class="maltose-tab" id= "{{index}}" bindtap="chooseTab" style="{{index !== 'Emoji' && !showEmoticon || index === 'Emoji' && !showEmoji ? 'background-color: #ffe2d7' : ''}}">{{index}}</text>
+        </view>
+    </view>
+</view>
+

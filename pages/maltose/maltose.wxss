@@ -1,0 +1,85 @@
+.maltose-wrap {
+    max-width: 650rpx;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 2rpx;
+}
+.maltose-wrap .header{
+    display: inline-block;
+    font-size: 66rpx;
+    color: lightsalmon;
+    font-weight: lighter;
+    margin: 45rpx 0 20rpx;
+}
+.maltose-wrap .desc {
+    display: inline-block;
+    font-size: 40rpx;
+    color: #555;
+    line-height: 1.3;
+    font-weight: lighter;
+    margin-bottom: 18rpx;
+}
+.maltose-wrap .code {
+    color: lightseagreen;
+}
+.maltose-wrap textarea {
+    margin: 15rpx 0;
+    box-sizing: border-box;
+    padding: 22rpx;
+    font-size: 28rpx;
+    border-radius: 6rpx;
+}
+.textarea-focus {
+    border: 1px solid lightsalmon;
+}
+.maltose-logo {
+    display:inline-block;
+    background-color: #ffbca1;
+    border: none;
+    color: #fff;
+    padding:0 15rpx;
+    font-size: 28rpx;
+    line-height: 2.2;
+    margin-bottom: 0;
+    border-radius: 10rpx 10rpx 0 0;
+}
+.maltose-logo::after {
+    content: none
+}
+
+.maltose {
+    margin-top: -10rpx;
+    border: 1px solid #ffece4;
+    border-radius: 0 5px 5px 5px;
+    font-size: 0;
+    overflow: hidden;
+}
+.maltose-ul {
+    max-height: 280rpx;
+    overflow: scroll;
+    padding: 20rpx;
+    border-bottom: 1px solid #ffece4;
+}
+.maltose-li-emoji {
+    font-size: 30rpx !important;
+}
+.maltose-li {
+    display: inline-block;
+    font-size: 24rpx;
+    line-height: 28rpx;
+    padding: 10rpx 20rpx;
+    margin: 0 20rpx 24rpx 0;
+    background-color: #fff9f6;
+    border-radius: 10rpx;
+    position: relative;
+}
+.maltose-title {
+    display: inline;
+}
+.maltose-tab {
+    display: inline-block;
+    padding: 10rpx 36rpx;
+    font-size: 24rpx;
+    color: #666;
+    background-color: #ffece4;
+}
