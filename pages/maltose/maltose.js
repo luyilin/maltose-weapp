@@ -67,6 +67,23 @@ Page({
         })
       }
     },
+    tada: function(e) {
+      console.log(e, e.touches[0].pageX,e.touches[0].clientX)
+      var animation = wx.createAnimation({
+        duration: 180,
+        timingFunction: 'ease',
+      })
+      this.animation = animation
+      this.animation.rotate(-3).scale(.9, .9).step()
+      .rotate(3).scale(1.1, 1.1).step()
+      .rotate(-3).scale(1.1, 1.1).step()
+      .rotate(3).scale(1.1, 1.1).step()
+      .rotate(-3).scale(1.1, 1.1).step()
+      .rotate(0).scale(1, 1).step()
+      this.setData({
+        tada: this.animation.export()
+      })
+    },
     onLoad: function() {
       console.log('maltose onload')
       var that = this
