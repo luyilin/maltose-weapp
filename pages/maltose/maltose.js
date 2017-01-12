@@ -68,9 +68,8 @@ Page({
       }
     },
     tada: function(e) {
-      console.log(e, e.touches[0].pageX,e.touches[0].clientX)
       var animation = wx.createAnimation({
-        duration: 180,
+        duration: 160,
         timingFunction: 'ease',
       })
       this.animation = animation
